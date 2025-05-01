@@ -13,5 +13,6 @@ DOTFILES_REPO="${XDG_DATA_HOME:-$HOME/.local/share}/dotfiles/git"
 alias dotfiles="git --git-dir=$DOTFILES_REPO --work-tree=$HOME"
 
 # Aliases
-alias ls="ls -a --color"
+alias ls="ls --color=auto --group-directories-first"
+alias la="ls -a"
 alias win="cd /mnt/c/Users/William"
