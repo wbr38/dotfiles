@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# Path
+## Mac
+export PATH="/Users/william/Desktop/Nextcloud/Scripts/UC:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
+
+## Win
+export PATH="/mnt/c/Users/William/Desktop/Nextcloud/Scripts/UC:$PATH"
+
+# Dotfiles repo
+DOTFILES_REPO="${XDG_DATA_HOME:-$HOME/.local/share}/dotfiles/git"
+alias dotfiles="git --git-dir=$DOTFILES_REPO --work-tree=$HOME"
+
+# Aliases
+alias ls="ls -a --color"
+alias win="cd /mnt/c/Users/William"
