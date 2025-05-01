@@ -13,6 +13,16 @@ DOTFILES_REPO="${XDG_DATA_HOME:-$HOME/.local/share}/dotfiles/git"
 alias dotfiles="git --git-dir=$DOTFILES_REPO --work-tree=$HOME"
 
 # Aliases
-alias ls="ls --color=auto --group-directories-first"
-alias la="ls -a"
+
+# On macOS use coreutils ls instead (as group-directories-first doesn't exist on mac ls)
+# From: brew install coreutils
+LS="ls"
+if [ "$OSTYPE" != linux-gnu ]; then
+    LS="gls"
+fi
+
+alias ls="$LS --color=auto --group-directories-first"
+alias l="ls"
+alias la="$LS --color=auto --group-directories-first -a"
+
 alias win="cd /mnt/c/Users/William"
