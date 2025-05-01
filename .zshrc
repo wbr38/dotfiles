@@ -40,3 +40,7 @@ export NVM_DIR="$HOME/.nvm"
 autoload -Uz +X compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' menu select
+
+# Ctrl+Left / Ctrl+Right
+bindkey $terminfo[kRIT5] forward-word
+bindkey $terminfo[kLFT5] backward-word
