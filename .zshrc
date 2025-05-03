@@ -31,6 +31,8 @@ get_git_branch() {
 
 setopt PROMPT_SUBST
 export PROMPT='${RESET}${USER_HOST} ${GOLD}[ ${LOCATION} ${GOLD}]$(get_git_branch) ${NEWLINE}${RESET}$ '
+
+# nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
