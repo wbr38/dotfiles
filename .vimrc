@@ -1,3 +1,5 @@
+syntax on
+
 "Centered lines
 noremap k kzz
 noremap j jzz
@@ -10,6 +12,7 @@ set clipboard=unnamed
 
 set number
 set relativenumber "relative line numbers
+set tabstop=4 shiftwidth=4
 
 "Case insensitive search (and replace unfortunately)
 set ignorecase
