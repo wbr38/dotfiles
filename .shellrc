@@ -26,6 +26,7 @@ alias l="ls"
 alias la="$LS --color=auto --group-directories-first -a"
 
 alias win="cd /mnt/c/Users/William"
+alias uni="cd ~/Desktop/Nextcloud/School/2025/Semester\ 1/"
 
 alias git_uni="git config user.name \"William Brown\" && git config user.email \"wbr38@uclive.ac.nz\""
 alias git_personal="git config user.name \"Extacy\" && git config user.email \"git@extacy.cc\""
