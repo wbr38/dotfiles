@@ -4,6 +4,7 @@
 ## Mac
 export PATH="/Users/william/Desktop/Nextcloud/Scripts/UC:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
+export PATH="$HOME/.local/bin/:$PATH"
 
 ## Win
 export PATH="/mnt/c/Users/William/Desktop/Nextcloud/Scripts/UC:$PATH"
