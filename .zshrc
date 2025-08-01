@@ -46,3 +46,6 @@ zstyle ':completion:*' menu select
 # Ctrl+Left / Ctrl+Right
 bindkey $terminfo[kRIT5] forward-word
 bindkey $terminfo[kLFT5] backward-word
+
+# Shift+tab completion
+bindkey $terminfo[kcbt] reverse-menu-complete
