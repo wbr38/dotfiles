@@ -4,6 +4,7 @@
 # .env file should contain:
 # export SSH_USER=""
 # export SSH_PASS=""
+# export SSH_HOST=""
 # export TOTP_SECRET=""
 
 SCRIPT_DIR=$(dirname "$0")
@@ -16,17 +17,26 @@ fi
 OS=$(uname)
 
 if [[ "$OS" == "Linux" ]]; then
-    SSH_PASS_CMD="./bin/sshpass_linux"
+    SSH_PASS_CMD="./sshpass_linux"
 elif [[ "$OS" == "Darwin" ]]; then
-    SSH_PASS_CMD="./bin/sshpass_osx"
+    SSH_PASS_CMD="./sshpass_osx"
 else
     echo "Unsupported OS $OS"
     exit 1
 fi
 
-# ./bin/sshpass_osx \
-$SSH_PASS_CMD \
+SSH_BASE=(
+    "$SSH_PASS_CMD"
     -v \
     -p $SSH_PASS \
     -o $(oathtool --totp=SHA1 --base32 $TOTP_SECRET) \
-    ssh $SSH_USER@linux.cosc.canterbury.ac.nz
+    ssh
+)
+
+if [ $# -eq 0 ]; then
+    # No args, launch interactive shell
+    exec "${SSH_BASE[@]}" "$SSH_USER@$SSH_HOST"
+else
+    # args passed, forward as is
+    exec "${SSH_BASE[@]}" "$@"
+fi
