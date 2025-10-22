@@ -1,15 +1,12 @@
-# Install
+# dotfiles
 
+My personal dotfiles for Windows (WSL), MacOS, and Linux.
+
+## Install
 ```sh
-DOTFILES_REPO="${XDG_DATA_HOME:-$HOME/.local/share}/dotfiles/git"
+DOTFILES_REPO="$HOME/.local/share/dotfiles/git"
 $ git clone --bare https://git.extacy.cc/Extacy/dotfiles "$DOTFILES_REPO"
 $ alias dotfiles="git --git-dir=$DOTFILES_REPO --work-tree=$HOME"
 $ dotfiles config --local status.showUntrackedFiles no
 $ dotfiles checkout
-```
-
-## Windows
-Set the environment variable
-```
-MPV_HOME=\\wsl.localhost\Ubuntu\home\wsl\.config\mpv
 ```
