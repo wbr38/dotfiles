@@ -107,5 +107,5 @@
     },
     "schemes": [],
     "themes": [],
-    "windowingBehavior": "useExisting"
+    "windowingBehavior": "useNew"
 }
