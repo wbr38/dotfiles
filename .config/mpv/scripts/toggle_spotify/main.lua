@@ -1,4 +1,8 @@
+local utils = require 'mp.utils'
 local enabled = false
+
+PLAY_SPOTIFY_AHK = mp.get_script_directory() .. "/play_spotify.ahk"
+PAUSE_SPOTIFY_AHK = mp.get_script_directory() .. "/pause_spotify.ahk"
 
 local function run_command_osx(cmd)
     local handle = io.popen(cmd)
@@ -31,7 +35,7 @@ local function spotify_pause()
     if os_type == "Windows" then
         mp.command_native({
             name = "subprocess",
-            args = {"C:\\Program Files\\AutoHotkey\\v2\\AutoHotkey64.exe", "C:\\Users\\William\\Desktop\\Nextcloud\\Scripts\\AHK\\pause_spotify.ahk"},
+            args = {"C:\\Program Files\\AutoHotkey\\v2\\AutoHotkey64.exe", PAUSE_SPOTIFY_AHK},
             detach = true
         })
     elseif os_type == "Darwin" then
@@ -48,7 +52,7 @@ local function spotify_play()
     if os_type == "Windows" then
         mp.command_native({
             name = "subprocess",
-            args = {"C:\\Program Files\\AutoHotkey\\v2\\AutoHotkey64.exe", "C:\\Users\\William\\Desktop\\Nextcloud\\Scripts\\AHK\\play_spotify.ahk"},
+            args = {"C:\\Program Files\\AutoHotkey\\v2\\AutoHotkey64.exe", PLAY_SPOTIFY_AHK},
             detach = true
         })
     elseif os_type == "Darwin" then
@@ -81,6 +85,7 @@ local function toggle_pause_spotify()
         spotify_pause()
     end
 end
+
 mp.add_key_binding(nil, "toggle-pause-spotify", toggle_pause_spotify)
 
 mp.observe_property("pause", "bool", on_pause)
