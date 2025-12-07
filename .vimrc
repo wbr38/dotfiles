@@ -1,15 +1,7 @@
 syntax on "Syntax highlighting
 
 "Centered editing
-noremap k kzz
-noremap j jzz
-noremap u uzz
-noremap { {zz
-noremap } }zz
-
-"Center after jumping to mark
-nnoremap ` :<C-u>execute "normal! `" . getcharstr() . "zz"<CR> 
-nnoremap ' :<C-u>execute "normal! '" . getcharstr() . "zz"<CR>
+set scrolloff=9999
 
 "Sync Clipboard - https://github.com/VsVim/VsVim/issues/2423#issuecomment-439662133
 set clipboard=unnamed
@@ -20,6 +12,8 @@ set relativenumber "relative line numbers
 "Indentation
 set tabstop=4
 set shiftwidth=4
+set autoindent
+set smartindent
 
 "Case insensitive search (and replace unfortunately)
 set ignorecase
