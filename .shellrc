@@ -2,6 +2,7 @@
 
 # Path
 export PATH="$HOME/.local/bin/:$PATH"
+export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 
 ## Mac
 export PATH="/opt/homebrew/bin:$PATH"
@@ -22,6 +23,8 @@ fi
 alias ls="$LS --color=auto --group-directories-first"
 alias l="ls"
 alias la="$LS --color=auto --group-directories-first -a"
+
+alias vim="nvim"
 
 alias win="cd /mnt/c/Users/William"
 alias uni="cd ~/Desktop/Nextcloud/School/2025/Semester\ 2/"

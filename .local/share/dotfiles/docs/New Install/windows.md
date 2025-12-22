@@ -23,7 +23,7 @@ Do this last as Windows will auto install drivers after connected to internet.
 - [ ] Everything
   - [ ]  Ignore *.lnk files `Tools | Options | Indexes -> Exclude`
 - [ ] AutoHotkey
-  - [ ] Make a startup app for Rebinds.ahk (lnk)
+  - [ ] Make a startup app for Rebinds.ahk (place .lnk file into `shell:startup`)
 - [ ] 7-Zip
 - [ ] WinsCP
 - [ ] Discord
@@ -148,3 +148,18 @@ git config --global core.symlinks true
   options = "metadata,umask=22,fmask=11"
   ```
 - [ ]  Then `wsl --shutdown` from Powershell
+
+### nvim
+Install bob
+
+```sh
+wget https://github.com/MordechaiHadad/bob/releases/latest/download/bob-linux-x86_64.zip
+unzip bob-linux-x86_64.zip
+cd bob-linux-x86_64
+chmod +x box
+sudo mv bob /usr/local/bin
+```
+
+```sh
+bob use nightly
+````
