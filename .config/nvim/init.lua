@@ -21,11 +21,15 @@ vim.opt.incsearch = true
 vim.opt.signcolumn = "yes"
 vim.opt.winborder = "rounded"
 
+-- Scrolling
+vim.opt.mouse = "a"
+vim.opt.mousescroll = "ver:1,hor:1"
+
 -- Keymaps
 vim.keymap.set("n", "d", "\"_d", { noremap = true }) -- Remove copy on delete
 vim.keymap.set("v", "d", "\"_d", { noremap = true }) -- Remove copy on delete
 vim.keymap.set("x", "p", "P", { noremap = true })    -- Paste without yanking
-vim.keymap.set("n", "<M-S-F>", vim.lsp.buf.format)
+vim.keymap.set("n", "<M-S-F>", vim.lsp.buf.format)   -- Alt+Shift+F Format
 
 -- Plugins
 vim.pack.add({
