@@ -11,3 +11,4 @@
 	enabled = true
 [core]
 	excludesFile = ~/.gitignore-global
+	autocrlf = false
