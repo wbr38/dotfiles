@@ -7,3 +7,7 @@
 [alias]
 	st = status
 	l = !git_log.sh
+[rerere]
+	enabled = true
+[core]
+	excludesFile = ~/.gitignore-global
