@@ -1,0 +1,243 @@
+[
+    {
+        "key": "ctrl+n",
+        "command": "explorer.newFile"
+    },
+    {
+        "key": "ctrl+shift+n",
+        "command": "explorer.newFolder"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "editor.action.deleteLines",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+alt+s",
+        "command": "git.stageSelectedRanges",
+        "when": "isInDiffEditor"
+    },
+    {
+        "key": "ctrl+k ctrl+alt+s",
+        "command": "-git.stageSelectedRanges",
+        "when": "isInDiffEditor"
+    },
+    {
+        "key": "ctrl+alt+z",
+        "command": "git.unstageSelectedRanges",
+        "when": "isInDiffEditor"
+    },
+    {
+        "key": "ctrl+k ctrl+n",
+        "command": "-git.unstageSelectedRanges",
+        "when": "isInDiffEditor"
+    },
+    {
+        "key": "ctrl+shift+enter",
+        "command": "-as3mxml.quickCompileAndDebug"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-as3mxml.quickCompileAndRun"
+    },
+    {
+        "key": "alt+a",
+        "command": "wwm.aligncode"
+    },
+    {
+        "key": "ctrl+k ctrl+r",
+        "command": "-workbench.action.keybindingsReference"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.reloadWindow",
+        "when": "isDevelopment && !isAuxiliaryWindowFocusedContext"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.openRecent"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-jupyter.refreshDataViewer",
+        "when": "isWorkspaceTrusted && jupyter.dataViewerActive"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-python.refreshTensorBoard",
+        "when": "python.hasActiveTensorBoardSession"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.terminal.runRecentCommand",
+        "when": "accessibilityModeEnabled && terminalFocus && terminalHasBeenCreated || accessibilityModeEnabled && terminalFocus && terminalProcessSupported || accessibilityModeEnabled && accessibleViewIsShown && terminalHasBeenCreated && accessibleViewCurrentProviderId == 'terminal' || accessibilityModeEnabled && accessibleViewIsShown && terminalProcessSupported && accessibleViewCurrentProviderId == 'terminal'"
+    },
+    {
+        "key": "ctrl+alt+r",
+        "command": "-workbench.action.terminal.runRecentCommand",
+        "when": "terminalFocus && terminalHasBeenCreated && !accessibilityModeEnabled || terminalFocus && terminalProcessSupported && !accessibilityModeEnabled"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.quickOpenNavigateNextInRecentFilesPicker",
+        "when": "inQuickOpen && inRecentFilesPicker"
+    },
+    {
+        "key": "ctrl+alt+r",
+        "command": "git.revertSelectedRanges",
+        "when": "isInDiffEditor && !operationInProgress"
+    },
+    {
+        "key": "ctrl+k ctrl+r",
+        "command": "-git.revertSelectedRanges",
+        "when": "isInDiffEditor && !operationInProgress"
+    },
+    {
+        "key": "ctrl+alt+r",
+        "command": "-workbench.action.terminal.sendSequence",
+        "when": "accessibilityModeEnabled && terminalFocus"
+    },
+    {
+        "key": "f8",
+        "command": "-editor.action.marker.nextInFiles",
+        "when": "editorFocus"
+    },
+    {
+        "key": "f8",
+        "command": "workbench.action.debug.stepOver",
+        "when": "debugState == 'stopped'"
+    },
+    {
+        "key": "f10",
+        "command": "-workbench.action.debug.stepOver",
+        "when": "debugState == 'stopped'"
+    },
+    {
+        "key": "f7",
+        "command": "-editor.action.wordHighlight.next",
+        "when": "editorTextFocus && hasWordHighlights"
+    },
+    {
+        "key": "f7",
+        "command": "-editor.action.accessibleDiffViewer.next",
+        "when": "isInDiffEditor"
+    },
+    {
+        "key": "f7",
+        "command": "workbench.action.debug.stepInto",
+        "when": "debugState != 'inactive'"
+    },
+    {
+        "key": "f11",
+        "command": "-workbench.action.debug.stepInto",
+        "when": "debugState != 'inactive'"
+    },
+    {
+        "key": "shift+enter",
+        "command": "-python.execSelectionInTerminal",
+        "when": "editorTextFocus && !findInputFocussed && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-extension.vim_ctrl+b",
+        "when": "editorTextFocus && vim.active && vim.use<C-b> && !inDebugRepl && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "-extension.vim_ctrl+p",
+        "when": "editorTextFocus && vim.active && vim.use<C-p> && !inDebugRepl || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+    },
+    {
+        "key": "ctrl+]",
+        "command": "-extension.vim_ctrl+]",
+        "when": "editorTextFocus && vim.active && vim.use<C-]> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+[",
+        "command": "-extension.vim_ctrl+[",
+        "when": "editorTextFocus && vim.active && vim.use<C-[> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+y",
+        "command": "-extension.vim_ctrl+y",
+        "when": "editorTextFocus && vim.active && vim.use<C-y> && !inDebugRepl"
+    },
+    {
+        "key": "f1",
+        "command": "-workbench.action.showCommands"
+    },
+    {
+        "key": "f1",
+        "command": "toggleVim"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-markdown.extension.editing.toggleBold",
+        "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "-extension.vim_ctrl+f",
+        "when": "editorTextFocus && vim.active && vim.use<C-f> && !inDebugRepl && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+a",
+        "command": "-extension.vim_ctrl+a",
+        "when": "editorTextFocus && vim.active && vim.use<C-a> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+x",
+        "command": "-extension.vim_ctrl+x",
+        "when": "editorTextFocus && vim.active && vim.use<C-x> && !inDebugRepl"
+    },
+    {
+        "key": "f12",
+        "command": "references-view.findReferences",
+        "when": "editorHasReferenceProvider"
+    },
+    {
+        "key": "shift+alt+f12",
+        "command": "-references-view.findReferences",
+        "when": "editorHasReferenceProvider"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "-extension.vim_ctrl+e",
+        "when": "editorTextFocus && vim.active && vim.use<C-e> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "editor.action.showHover",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+enter",
+        "command": "-python.execSelectionInTerminal",
+        "when": "editorTextFocus && !findInputFocussed && !isCompositeNotebook && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
+    },
+    {
+        "key": "shift+enter",
+        "command": "-python.execInREPL",
+        "when": "config.python.REPL.sendToNativeREPL && editorTextFocus && !isCompositeNotebook && !jupyter.ownsSelection && !notebookEditorFocused && editorLangId == 'python'"
+    },
+    {
+        "key": "alt+j",
+        "command": "editor.action.insertCursorBelow",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+down",
+        "command": "-editor.action.insertCursorBelow",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+k",
+        "command": "editor.action.insertCursorAbove",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+up",
+        "command": "-editor.action.insertCursorAbove",
+        "when": "editorTextFocus"
+    }
+]

@@ -41,15 +41,20 @@ Do this last as Windows will auto install drivers after connected to internet.
 - [ ] Notepad++
 - [ ] VSCode
   - [ ] Sync with GitHub account
+  - [ ] Sync settings with dotfiles repo
+    ```
+    mklink /H .config\vscode\settings.json ..\..\AppData\Roaming\Code\User\settings.json
+    mklink /H .config\vscode\keybindings.json ..\..\AppData\Roaming\Code\User\keybindings.json
+    ```
 - [ ] Visual Studio
 - [ ] Windows Terminal
   - [ ] Install from [~/.config/windows_terminal.json](~/.config/windows_terminal.json)
 - [ ] Vim
 - [ ] Git
-```sh
-git config --global core.autocrlf true
-git config --global core.symlinks true
-```
+  ```sh
+  git config --global core.autocrlf true
+  git config --global core.symlinks true
+  ```
 - [ ] Python (not from Windows store)
   - [ ] Install poetry
     - [ ] `poetry config virtualenvs.in-project true`
