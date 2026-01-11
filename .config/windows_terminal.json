@@ -106,6 +106,7 @@
         ]
     },
     "schemes": [],
+    "tabSwitcherMode": "mru",
     "themes": [],
     "windowingBehavior": "useNew"
 }
