@@ -25,6 +25,9 @@ vim.opt.winborder = "rounded"
 vim.opt.mouse = "a"
 vim.opt.mousescroll = "ver:1,hor:1"
 
+-- Disable automatic commenting
+vim.cmd([[autocmd FileType * set formatoptions-=ro]])
+
 -- Keymaps
 vim.keymap.set("n", "d", "\"_d", { noremap = true }) -- Remove copy on delete
 vim.keymap.set("v", "d", "\"_d", { noremap = true }) -- Remove copy on delete
