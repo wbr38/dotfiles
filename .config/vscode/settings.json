@@ -42,15 +42,20 @@
 	"black-formatter.args": [
 		"--line-length 119"
 	],
+	"chat.viewSessions.orientation": "stacked",
+	"csharp.experimental.debug.hotReload": true,
 	"debug.inlineValues": "off",
 	"debug.onTaskErrors": "debugAnyway",
+	"diffEditor.codeLens": true,
 	"diffEditor.ignoreTrimWhitespace": false,
 	"diffEditor.renderSideBySide": true,
 	"editor.codeLens": false,
 	"editor.cursorSurroundingLines": 999,
 	"editor.fontFamily": "Consolas",
 	"editor.fontSize": 14,
+	"editor.inlayHints.enabled": "offUnlessPressed",
 	"editor.inlineSuggest.enabled": false,
+	"editor.largeFileOptimizations": false,
 	"editor.lightbulb.enabled": "off",
 	"editor.lineNumbers": "relative",
 	"editor.minimap.maxColumn": 70,
@@ -64,20 +69,28 @@
 	"editor.stickyScroll.enabled": true,
 	"editor.wordWrap": "off",
 	"explorer.confirmDelete": false,
+	"extensions.experimental.affinity": {
+		"vscodevim.vim": 1
+	},
 	"files.associations": {
 		"*.html": "liquid"
 	},
 	"files.autoSave": "afterDelay",
+	"files.autoSaveDelay": 5000,
 	"files.exclude": {
 		// "**/*.o*": true,
 		// "**/*.d*": true
 	},
+	"git.mergeEditor": true,
 	"git.openRepositoryInParentFolders": "always",
+	"github.copilot.nextEditSuggestions.enabled": true,
 	"gitlens.ai.model": "openai:gpt-4o",
+	"gitlens.rebaseEditor.openOnPausedRebase": false,
 	"gitlens.views.scm.grouped.views": {
 		"branches": false,
 		"commits": false,
 		"contributors": false,
+		"fileHistory": false,
 		"launchpad": false,
 		"remotes": false,
 		"repositories": false,
@@ -100,6 +113,7 @@
 	"leetcode.hint.commentDescription": false,
 	"leetcode.hint.configWebviewMarkdown": false,
 	"leetcode.workspaceFolder": "/home/wsl/Projects/leetcode",
+	"mergeEditor.diffAlgorithm": "advanced",
 	"OcpCadViewer.render.ambient_intensity": 0,
 	"OcpCadViewer.render.direct_intensity": 0.97,
 	"OcpCadViewer.render.metalness": 0.11,
@@ -120,9 +134,9 @@
 		"botnetnuc": "linux",
 		"uc": "linux"
 	},
+	"resharper.build.customMsbuildPath": "C:\\Program Files\\JetBrains\\JetBrains Rider 2025.3.0.1\\tools\\MSBuild\\Current\\Bin\\MSBuild.exe",
+	"resx-editor.generateCode": true,
 	"security.workspace.trust.enabled": false,
-	"svg.preview.boundingBox": false,
-	"svg.preview.transparencyGrid": false,
 	"terminal.integrated.defaultProfile.linux": "zsh",
 	"terminal.integrated.defaultProfile.windows": "Git Bash",
 	"terminal.integrated.fontSize": 14,
@@ -155,15 +169,21 @@
 	"terminal.integrated.shellIntegration.history": 0,
 	"tinymist.formatterMode": "typstyle",
 	"vim.cursorStylePerMode.normal": "block-outline",
+	"vim.handleKeys": {
+		"<C-d>": true,
+		"<C-s>": false,
+		"<C-t>": false
+	},
 	"vim.useSystemClipboard": true,
 	"vim.vimrc.enable": true,
 	"vim.vimrc.path": "~/.vimrc",
+	// "vim.vimrc.path": "\\\\wsl.localhost\\Ubuntu\\home\\wsl\\.vimrc",
 	"window.menuBarVisibility": "visible",
 	"workbench.colorCustomizations": {
 		"tree.indentGuidesStroke": "#fbc4ff"
 	},
 	"workbench.editorAssociations": {
-		"*.svg": "default"
+		"git-rebase-todo": "default"
 	},
 	"workbench.tree.indent": 16
 }

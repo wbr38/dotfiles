@@ -43,8 +43,8 @@ Do this last as Windows will auto install drivers after connected to internet.
   - [ ] Sync with GitHub account
   - [ ] Sync settings with dotfiles repo
     ```
-    mklink /H .config\vscode\settings.json ..\..\AppData\Roaming\Code\User\settings.json
-    mklink /H .config\vscode\keybindings.json ..\..\AppData\Roaming\Code\User\keybindings.json
+    mklink /H .config\vscode\settings.json AppData\Roaming\Code\User\settings.json
+    mklink /H .config\vscode\keybindings.json AppData\Roaming\Code\User\keybindings.json
     ```
 - [ ] Visual Studio
 - [ ] Windows Terminal

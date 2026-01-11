@@ -239,5 +239,13 @@
         "key": "ctrl+alt+up",
         "command": "-editor.action.insertCursorAbove",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+=",
+        "command": "workbench.action.increaseViewWidth"
+    },
+    {
+        "key": "alt+-",
+        "command": "workbench.action.decreaseViewWidth"
     }
 ]
