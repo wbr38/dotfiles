@@ -17,7 +17,7 @@ alias dotfiles="git --git-dir=$DOTFILES_REPO --work-tree=$HOME"
 # On macOS use coreutils ls instead (as group-directories-first doesn't exist on mac ls)
 # From: brew install coreutils
 LS="ls"
-if [ "$OSTYPE" != linux-gnu ]; then
+if [ "$OSTYPE" != "linux-gnu" ] && [ "$OSTYPE" != "msys" ]; then
     LS="gls"
 fi
 
