@@ -60,29 +60,18 @@ Delete::
 }
 
 ; Media keys
-$f5::
-{
-	if not WinActive("ahk_exe devenv.exe") && not WinActive("ahk_exe code.exe") && not WinActive("ahk_exe ida64.exe") && not WinActive("ahk_exe Inpaint.exe") && not WinActive("ahk_exe idea64.exe")
-		Send("{Media_Prev}")
-	else
-		Send("{F5}")
-}
+GroupAdd "IgnoreMediaKeysApps", "ahk_exe devenv.exe"
+GroupAdd "IgnoreMediaKeysApps", "ahk_exe code.exe"
+GroupAdd "IgnoreMediaKeysApps", "ahk_exe ida64.exe"
+GroupAdd "IgnoreMediaKeysApps", "ahk_exe Inpaint.exe"
+GroupAdd "IgnoreMediaKeysApps", "ahk_exe idea64.exe"
+GroupAdd "IgnoreMediaKeysApps", "ahk_exe rider64.exe"
 
-$f6::
-{
-	if not WinActive("ahk_exe devenv.exe") && not WinActive("ahk_exe code.exe") && not WinActive("ahk_exe ida64.exe") && not WinActive("ahk_exe Inpaint.exe") && not WinActive("ahk_exe idea64.exe") 
-		Send("{Media_Play_Pause}")
-	else
-		Send("{F6}")
-}
-
-$f7::
-{
-	if not WinActive("ahk_exe devenv.exe") && not WinActive("ahk_exe code.exe") && not WinActive("ahk_exe ida64.exe") && not WinActive("ahk_exe Inpaint.exe") && not WinActive("ahk_exe idea64.exe")
-		Send("{Media_Next}")
-	else
-		Send("{F7}")
-}
+#HotIf !WinActive("ahk_group IgnoreMediaKeysApps")
+F5::Media_Prev
+F6::Media_Play_Pause
+F7::Media_Next
+#HotIf
 
 ; Spanish
 accentMap := Map(
