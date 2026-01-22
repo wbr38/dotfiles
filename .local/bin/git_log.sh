@@ -7,7 +7,7 @@ LF+="%h"
 
 # subject
 LF+=" "
-LF+="%<(60,trunc)"
+LF+="%<(90,trunc)"
 LF+="%s"
 
 # author name
