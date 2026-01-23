@@ -1,0 +1,40 @@
+# Tool for generating GNU Standards-compliant Makefiles
+brew "automake"
+# ISP tool & library for Bouffalo Labs RISC-V Microcontrollers and SoCs
+brew "blisp"
+# Version manager for neovim
+brew "bob"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# Select default apps for documents and URL schemes on macOS
+brew "duti"
+# Diff that operates at the word level
+brew "dwdiff"
+# Play, record, convert, and stream select audio and video codecs
+brew "ffmpeg"
+# GNU debugger
+brew "gdb"
+# Graph visualization software from AT&T and Bell Labs
+brew "graphviz"
+# Feature-rich command-line audio/video downloader
+brew "yt-dlp"
+# Media player based on MPlayer and mplayer2
+brew "mpv"
+# Fast, highly customisable system info script
+brew "neofetch"
+# Tools for one-time password authentication systems
+brew "oath-toolkit"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.12"
+# Generic machine emulator and virtualizer
+brew "qemu"
+# Utility that provides fast incremental file transfer
+brew "rsync"
+# Markup-based typesetting system
+brew "typst"
+# Internet file retriever
+brew "wget"
+# System monitor for the menu bar
+cask "stats"
+# JDK from the Eclipse Foundation (Adoptium)
+cask "temurin"
