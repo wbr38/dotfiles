@@ -5,6 +5,8 @@ export PATH="$HOME/.local/bin/:$PATH"
 export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 export PATH="$HOME/AppData/Local/bob/nightly/bin:$PATH"
 
+export POETRY_CONFIG_DIR="$HOME/.config/pypoetry"
+
 ## Mac
 export PATH="/opt/homebrew/bin:$PATH"
 
