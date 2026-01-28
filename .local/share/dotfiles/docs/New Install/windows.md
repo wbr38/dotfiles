@@ -30,6 +30,7 @@ Do this last as Windows will auto install drivers after connected to internet.
   - [ ] Vencord
   - Windows Settings
     - [ ] Disable exit to tray
+    - [ ] `System > Multitasking > Snap windows` untick "Show my snapped windows when I hover over taskbar apps, in Task View, and when I press Alt+Tab"
   - Notifications
     - [ ] Disable desktop notifications
     - [ ] Disable taskbar flashing
