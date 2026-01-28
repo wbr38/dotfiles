@@ -35,15 +35,8 @@ vim.keymap.set("x", "p", "P", { noremap = true })    -- Paste without yanking
 vim.keymap.set("n", "<M-S-F>", vim.lsp.buf.format)   -- Alt+Shift+F Format
 
 -- Plugins
-vim.pack.add({
-	{ src = "https://github.com/vague-theme/vague.nvim" },
-	{ src = "https://github.com/neovim/nvim-lspconfig" },
-})
-
-vim.lsp.enable({
-	"lua_ls"
-})
-
+vim.pack.add({ "https://github.com/neovim/nvim-lspconfig" })
+vim.lsp.enable({ "lua_ls" })
 vim.lsp.config("lua_ls", {
     settings = {
         Lua = {
@@ -54,4 +47,6 @@ vim.lsp.config("lua_ls", {
     }
 })
 
-vim.cmd("colorscheme vague")
+-- VSCode theme
+vim.pack.add({ "https://github.com/Mofiqul/vscode.nvim" })
+vim.cmd("colorscheme vscode")
