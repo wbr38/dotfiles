@@ -24,6 +24,8 @@ brew "mpv"
 brew "neofetch"
 # Tools for one-time password authentication systems
 brew "oath-toolkit"
+# Python package management tool
+brew "poetry"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.12"
 # Generic machine emulator and virtualizer
