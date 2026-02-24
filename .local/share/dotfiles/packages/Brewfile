@@ -36,6 +36,8 @@ brew "rsync"
 brew "typst"
 # Internet file retriever
 brew "wget"
+# Smooths scrolling and set mouse scroll directions independently
+cask "mos@beta"
 # System monitor for the menu bar
 cask "stats"
 # JDK from the Eclipse Foundation (Adoptium)
