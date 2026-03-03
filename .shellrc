@@ -9,6 +9,7 @@ export POETRY_CONFIG_DIR="$HOME/.config/pypoetry"
 
 ## Mac
 export PATH="/opt/homebrew/bin:$PATH"
+export STM32CubeMX_PATH="/Applications/STMicroelectronics/STM32CubeMX.app/Contents/Resources"
 
 # Dotfiles repo
 DOTFILES_REPO="${XDG_DATA_HOME:-$HOME/.local/share}/dotfiles/git"
