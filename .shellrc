@@ -1,40 +1,59 @@
 #!/bin/sh
 
-# Path
-export PATH="$HOME/.local/bin/:$PATH"
-export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
-export PATH="$HOME/AppData/Local/bob/nightly/bin:$PATH"
-
-export POETRY_CONFIG_DIR="$HOME/.config/pypoetry"
-
-## Mac
-export PATH="/opt/homebrew/bin:$PATH"
-export STM32CubeMX_PATH="/Applications/STMicroelectronics/STM32CubeMX.app/Contents/Resources"
-
 # Dotfiles repo
 DOTFILES_REPO="${XDG_DATA_HOME:-$HOME/.local/share}/dotfiles/git"
 alias dotfiles="git --git-dir=$DOTFILES_REPO --work-tree=$HOME"
 
+# Paths
+export PATH="$HOME/.local/bin/:$PATH"
+export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
+
+export POETRY_CONFIG_DIR="$HOME/.config/pypoetry"
+
 # Aliases
-
-# On macOS use coreutils ls instead (as group-directories-first doesn't exist on mac ls)
-# From: brew install coreutils
-LS="ls"
-if [ "$OSTYPE" != "linux-gnu" ] && [ "$OSTYPE" != "msys" ]; then
-    LS="gls"
-fi
-
-alias ls="$LS --color=auto --group-directories-first"
+alias ls="ls --color=auto --group-directories-first"
 alias l="ls"
-alias la="$LS --color=auto --group-directories-first -a"
+alias la="ls -a"
 
 alias vim="nvim"
 alias view="nvim -R"
 
-alias exp="explorer.exe ."
+alias uni="cd ~/Desktop/Nextcloud/School/2026"
 
-alias win="cd /mnt/c/Users/William"
-alias uni="cd ~/Desktop/Nextcloud/School/2025/Semester\ 2/"
 
-alias git_uni="git config user.name \"William Brown\" && git config user.email \"wbr38@uclive.ac.nz\""
-alias git_personal="git config user.name \"Extacy\" && git config user.email \"git@extacy.cc\""
+# Platform specific things
+UNAME="$(uname -sr)"
+
+## Mac specific
+case "$UNAME" in Darwin*)
+	export PATH="/opt/homebrew/bin:$PATH"
+	export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+	export STM32CubeMX_PATH="/Applications/STMicroelectronics/STM32CubeMX.app/Contents/Resources"
+
+	# On macOS use coreutils ls instead (as group-directories-first doesn't exist on mac ls)
+	alias ls="gls --color=auto --group-directories-first"
+	alias l="ls"
+	alias la="ls -a"
+
+	alias exp="open ."
+    ;;
+esac
+
+## Windows (WSL or Git Bash) specific
+case "$UNAME" in Linux*-WSL2|MINGW64*)
+	export PATH="$HOME/AppData/Local/bob/nightly/bin:$PATH"
+
+	alias exp="explorer.exe ."
+	alias win="cd /mnt/c/Users/William"
+	;;
+esac
+
+# Private shellrc
+if [ -f "$HOME/.shellrc-private" ]; then
+    . "$HOME/.shellrc-private"
+fi
+
+# Work shellrc
+if [ -f "$HOME/.shellrc-work" ]; then
+    . "$HOME/.shellrc-work"
+fi
