@@ -56,3 +56,8 @@ defaults write -g KeyRepeat -int 2
   - [ ] Download direct from website for free
   - [ ] Install the external helper (move to desktop first)
   - [ ] Enable home folder access
+- [ ] neovim
+  ```sh
+  brew install bob
+  bob use nightly
+  ```
