@@ -34,6 +34,8 @@ brew "ncdu"
 brew "neofetch"
 # Tools for one-time password authentication systems
 brew "oath-toolkit"
+# Minimal dumb-terminal emulation program
+brew "picocom"
 # Python package management tool
 brew "poetry"
 # Interpreted, interactive, object-oriented programming language

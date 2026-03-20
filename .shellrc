@@ -20,6 +20,7 @@ alias view="nvim -R"
 
 alias uni="cd ~/Desktop/Nextcloud/School/2026"
 
+alias ence361_serial="picocom -b 115200 /dev/tty.usbmodem*"
 
 # Platform specific things
 UNAME="$(uname -sr)"
