@@ -1,3 +1,4 @@
 .vscode
 *.slnf
 *.patch
+.DS_Store
