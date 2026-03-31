@@ -5,10 +5,11 @@
 [commit]
 	cleanup = scissors
 [alias]
-	st = status
 	l = !git_log.sh
+	st = status
 [rerere]
 	enabled = true
 [core]
-	excludesFile = ~/.gitignore-global
 	autocrlf = false
+	editor = nvim
+	excludesFile = ~/.gitignore-global
