@@ -50,8 +50,14 @@ brew "typst"
 brew "uncrustify"
 # Internet file retriever
 brew "wget"
+# Enable Windows-like alt-tab
+cask "alt-tab"
 # Pre-built GNU bare-metal toolchain for 32-bit Arm processors
 cask "gcc-arm-embedded"
+# Set of tools to manage resources and applications hosted on Google Cloud
+cask "gcloud-cli"
+# Keyboard customiser
+cask "karabiner-elements"
 # Smooths scrolling and set mouse scroll directions independently
 cask "mos@beta"
 # System monitor for the menu bar
