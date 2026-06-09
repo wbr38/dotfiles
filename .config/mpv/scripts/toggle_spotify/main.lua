@@ -38,7 +38,7 @@ local function spotify_pause()
             args = {"C:\\Program Files\\AutoHotkey\\v2\\AutoHotkey64.exe", PAUSE_SPOTIFY_AHK},
             detach = true
         })
-    elseif os_type == "Darwin" then
+    elseif os_type == "OSX" then
         run_command_osx([[osascript -e 'tell application "Spotify" to pause']])
     end
 end
@@ -55,7 +55,7 @@ local function spotify_play()
             args = {"C:\\Program Files\\AutoHotkey\\v2\\AutoHotkey64.exe", PLAY_SPOTIFY_AHK},
             detach = true
         })
-    elseif os_type == "Darwin" then
+    elseif os_type == "OSX" then
         run_command_osx([[osascript -e 'tell application "Spotify" to play']])
     end
 end
