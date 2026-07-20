@@ -10,6 +10,7 @@ defaults write -g KeyRepeat -int 2
 - [ ] Desktop: Minimise windows into application icon
 - [ ] Desktop: Minimise windows using scale effect
 - [ ] Desktop: Snap to grid (right click, Sort by snap to grid)
+- [ ] Displays: Show all resolutions and click `1800x1125`
 - [ ] Dock: Hide suggested and recent apps
 - [ ] Finder: Custom toolbar (add delete and airdrop)
 - [ ] Finder: Show hidden (dotfiles) Command+Shift+.
@@ -20,9 +21,13 @@ defaults write -g KeyRepeat -int 2
 - [ ] Trackpad: app expose 4 finger down
 - [ ] Trackpad: enable dragging 3 finger style
 - [ ] Trackpad: tap to click
+- [ ] Untick Displays: Automatically adjust brightness
+- [ ] Untick Keyboard: Adjust keyboard brightness in low light
 - [ ] Untick Mission Control: Automatically rearrange spaces based on most recent use
 - [ ] Untick Mission Control: Displays have separate spaces
 - [ ] Untick Mission Control: When switching to an application, switch to a Space with open windows for the applicaiton
+- [ ] Untick Mouse > Advanced > Pointer acceleration
+- [ ] Ensure ticked Trackpad > Scroll & Zoom > Natural scrolling
 - [ ] `brew install stats`
 
 
@@ -61,3 +66,8 @@ defaults write -g KeyRepeat -int 2
   brew install bob
   bob use nightly
   ```
+- [ ] mos
+  - Launch on login
+  - Step: 50
+  - Speed: 1
+  - Duration: 1

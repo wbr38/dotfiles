@@ -22,3 +22,9 @@ mklink /H .config\vscode\keybindings.json AppData\Roaming\Code\User\keybindings.
 del .config\windows_terminal.json
 mklink /H .config\windows_terminal.json AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
 ```
+
+### Mac
+```sh
+ln -f ~/.config/vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
+ln -f ~/.config/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+```
