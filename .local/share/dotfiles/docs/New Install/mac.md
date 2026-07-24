@@ -45,6 +45,7 @@ defaults write -g KeyRepeat -int 2
   - [ ] Configure preferences (command+,)
   - [ ] Install Consalas font (https://www.fontpalace.com/font-details/Consolas/)/
 - [ ] mpv
+  - [ ] Brew doesn't have a cask for mpv, so to add to Applications: https://github.com/9beach/mpv-app-bundle
   - [ ] https://github.com/mpv-player/mpv/wiki/FAQ#how-can-i-make-mpv-the-default-application-for-opening-movie-files-on-macos-osx
 - [ ] Karabiner-Elements
   - [ ] Cmd+Esc -> Cmd+H
