@@ -1,0 +1,9 @@
+background-blur = true
+background-opacity = 0.85
+cursor-style = block_hollow
+cursor-style-blink = false
+font-size = 14
+macos-titlebar-style = tabs
+resize-overlay = never
+shell-integration-features = no-cursor
+theme = Snazzy
