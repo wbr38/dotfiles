@@ -28,6 +28,7 @@ defaults write -g KeyRepeat -int 2
 - [ ] Untick Mission Control: When switching to an application, switch to a Space with open windows for the applicaiton
 - [ ] Untick Mouse > Advanced > Pointer acceleration
 - [ ] Ensure ticked Trackpad > Scroll & Zoom > Natural scrolling
+- [ ] Untick Airdrop & Continuity > Allow Handoff between this mac and your iCloud devices
 - [ ] `brew install stats`
 
 
