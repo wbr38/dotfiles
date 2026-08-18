@@ -1,9 +1,17 @@
+#font-family = menlo
 background-blur = true
 background-opacity = 0.85
 cursor-style = block_hollow
 cursor-style-blink = false
-font-size = 14
+font-size = 13
 macos-titlebar-style = tabs
 resize-overlay = never
 shell-integration-features = no-cursor
 theme = Snazzy
+window-padding-x = 20
+window-padding-y = 10
+
+# Disable font ligatures
+font-feature = -calt
+font-feature = -liga
+font-feature = -dlig
