@@ -11,5 +11,6 @@
 	enabled = true
 [core]
 	autocrlf = false
-	editor = nvim
+	#editor = nvim
+	editor = vim
 	excludesFile = ~/.gitignore-global
