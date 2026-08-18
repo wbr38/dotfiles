@@ -11,7 +11,7 @@ export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 export POETRY_CONFIG_DIR="$HOME/.config/pypoetry"
 
 # Aliases
-alias ls="ls --color=auto --group-directories-first"
+alias ls="gls --color=auto --group-directories-first --sort=time"
 alias l="ls"
 alias la="ls -a"
 
