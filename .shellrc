@@ -3,6 +3,7 @@
 # Dotfiles repo
 DOTFILES_REPO="${XDG_DATA_HOME:-$HOME/.local/share}/dotfiles/git"
 alias dotfiles="git --git-dir=$DOTFILES_REPO --work-tree=$HOME"
+alias dotfiles_code="GIT_DIR=$DOTFILES_REPO GIT_WORK_TREE=$HOME code ~"
 
 # Paths
 export PATH="$HOME/.local/bin/:$PATH"
