@@ -116,6 +116,35 @@
                         ]
                     },
                     {
+                        "description": "Spotify Controls",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "f5",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "osascript -e 'tell application \"Spotify\" to previous track'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "f6",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "osascript -e 'tell application \"Spotify\" to playpause'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "f7",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "osascript -e 'tell application \"Spotify\" to next track'" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Cmd+F4 to Cmd+W (close window)",
                         "manipulators": [
                             {
