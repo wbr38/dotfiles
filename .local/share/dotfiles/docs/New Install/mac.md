@@ -1,75 +1,83 @@
 # MacOS
 
 ## Config
-- [ ] Increase Keyboard Rate
 ```sh
-defaults write -g ApplePressAndHoldEnabled -bool false
-defaults write -g InitialKeyRepeat -int 10
-defaults write -g KeyRepeat -int 2
+# Increase keyboard rate
+defaults write -globalDomain ApplePressAndHoldEnabled -bool false   # Disable press and hold for special characters
+defaults write -globalDomain InitialKeyRepeat -int 9                # Delay before repeat key
+defaults write -globalDomain KeyRepeat -int 2                       # Repeat rate
+
+# Desktop: Minimise windows into application icon
+defaults write com.apple.dock minimize-to-application -bool true
+
+# Desktop: Minimise windows using scale effect
+defaults write com.apple.dock mineffect -string "scale"
+
+# Dock: Hide suggested and recent apps
+defaults write com.apple.dock show-recents -bool false
+
+# Finder: Show hidden files
+defaults write com.apple.finder AppleShowAllFiles -bool true
+
+# Finder: Show path (Toolbar -> View)
+defaults write com.apple.finder ShowPathbar -bool true
+
+# Function Keys: Use as standard keys
+defaults write -globalDomain com.apple.keyboard.fnState -bool true
+
+# Show battery percentage
+defaults -currentHost write com.apple.controlcenter.plist BatteryShowPercentage -bool true
+
+# Tick Mission Control: Group windows by application
+defaults write com.apple.dock expose-group-apps -bool true
+
+# Trackpad: app expose 4 finger down
+defaults write com.apple.dock showAppExposeGestureEnabled -bool true
+defaults write com.apple.AppleMultitouchTrackpad TrackpadFourFingerVertSwipeGesture -int 2
+
+# Trackpad: enable dragging 3 finger style
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
+
+# Trackpad: tap to click
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
+
+# Untick Mission Control: Automatically rearrange spaces based on most recent use
+defaults write com.apple.dock mru-spaces -bool false
+
+# Untick Mission Control: Displays have separate spaces
+defaults write com.apple.spaces spans-displays -bool true
+
+# Untick Mission Control: When switching to an application, switch to a Space with open windows for the applicaiton
+defaults write -globalDomain AppleSpacesSwitchOnActivate -bool false
+
+# Untick Mouse > Advanced > Pointer acceleration
+defaults write -globalDomain com.apple.mouse.linear -bool true
+
+# Ensure ticked Trackpad > Scroll & Zoom > Natural scrolling
+defaults write -globalDomain com.apple.swipescrolldirection -bool true
+
+# Untick Airdrop & Continuity > Allow Handoff between this mac and your iCloud devices
+defaults write ~/Library/Preferences/ByHost/com.apple.coreservices.useractivityd.plist ActivityAdvertisingAllowed -bool false
+defaults write ~/Library/Preferences/ByHost/com.apple.coreservices.useractivityd.plist ActivityReceivingAllowed -bool false
 ```
-- [ ] Desktop: Minimise windows into application icon
-- [ ] Desktop: Minimise windows using scale effect
+
+To manually configure:
 - [ ] Desktop: Snap to grid (right click, Sort by snap to grid)
 - [ ] Displays: Show all resolutions and click `1800x1125`
-- [ ] Dock: Hide suggested and recent apps
 - [ ] Finder: Custom toolbar (add delete and airdrop)
-- [ ] Finder: Show hidden (dotfiles) Command+Shift+.
-- [ ] Finder: Show path (Toolbar -> View)
-- [ ] Function Keys: Use as standard keys
-- [ ] Show battery percentage
-- [ ] Tick Mission Control: Group windows by application
-- [ ] Trackpad: app expose 4 finger down
-- [ ] Trackpad: enable dragging 3 finger style
-- [ ] Trackpad: tap to click
 - [ ] Untick Displays: Automatically adjust brightness
 - [ ] Untick Keyboard: Adjust keyboard brightness in low light
-- [ ] Untick Mission Control: Automatically rearrange spaces based on most recent use
-- [ ] Untick Mission Control: Displays have separate spaces
-- [ ] Untick Mission Control: When switching to an application, switch to a Space with open windows for the applicaiton
-- [ ] Untick Mouse > Advanced > Pointer acceleration
-- [ ] Ensure ticked Trackpad > Scroll & Zoom > Natural scrolling
-- [ ] Untick Airdrop & Continuity > Allow Handoff between this mac and your iCloud devices
-- [ ] `brew install stats`
-
 
 ## Applications
-- [ ] Firefox
-- [ ] Discord
-- [ ] Spotify
-- [ ] Nextcloud
-- [ ] VSCode (https://code.visualstudio.com/docs/setup/mac)
-  - [ ] Add to path (Command Pallette)
+Application specific manual configurations
+
+- VSCode
   - [ ] Add Open in VSCode right click https://stackoverflow.com/questions/64040393/open-a-folder-in-vscode-through-finder-in-macos
-- [ ] Developer Applications (run `git` in terminal)
-- [ ] Homebrew
-- [ ] iterm2
-  - [ ] Configure preferences (command+,)
-  - [ ] Install Consalas font (https://www.fontpalace.com/font-details/Consolas/)/
-- [ ] mpv
+- mpv
   - [ ] Brew doesn't have a cask for mpv, so to add to Applications: https://github.com/9beach/mpv-app-bundle
   - [ ] https://github.com/mpv-player/mpv/wiki/FAQ#how-can-i-make-mpv-the-default-application-for-opening-movie-files-on-macos-osx
-- [ ] Karabiner-Elements
-  - [ ] Cmd+Esc -> Cmd+H
-- [ ] AltTab
-  - [ ] Change to Command+Tab
-  - [ ] Hide apps with no window
-  - [ ] Show windows only from current space
-- [ ] Rectangle
-  - [ ] If using ctrl + arrow keys need to disable mission control shortcuts first
-    - [ ] `Keyboard > Keyboard Shortcuts > Mission Control`
-    - [ ] Disable both "Mission Control"
-    - [ ] Disable "Application Windows"
-- [ ] Keka
-  - [ ] Download direct from website for free
-  - [ ] Install the external helper (move to desktop first)
-  - [ ] Enable home folder access
 - [ ] neovim
   ```sh
   brew install bob
   bob use nightly
   ```
-- [ ] mos
-  - Launch on login
-  - Step: 50
-  - Speed: 1
-  - Duration: 1
