@@ -4,10 +4,15 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Swap option and command keys",
-                        "enabled": false,
+                        "description": "External keyboard: Swap option and command keys",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "is_built_in_keyboard": false }],
+                                        "type": "device_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "left_option",
                                     "modifiers": { "optional": ["any"] }
@@ -16,6 +21,12 @@
                                 "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "is_built_in_keyboard": false }],
+                                        "type": "device_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "left_command",
                                     "modifiers": { "optional": ["any"] }
@@ -24,6 +35,12 @@
                                 "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "is_built_in_keyboard": false }],
+                                        "type": "device_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "right_option",
                                     "modifiers": { "optional": ["any"] }
@@ -32,6 +49,12 @@
                                 "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "is_built_in_keyboard": false }],
+                                        "type": "device_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "right_command",
                                     "modifiers": { "optional": ["any"] }
@@ -42,9 +65,15 @@
                         ]
                     },
                     {
-                        "description": "Swap function and control keys",
+                        "description": "Internal keyboard: Swap function and control keys",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "is_built_in_keyboard": true }],
+                                        "type": "device_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "fn",
                                     "modifiers": {
@@ -61,6 +90,12 @@
                                 "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "is_built_in_keyboard": true }],
+                                        "type": "device_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "left_control",
                                     "modifiers": {
