@@ -241,6 +241,21 @@
                                 "type": "basic"
                             }
                         ]
+                    },
+                    {
+                        "description": "Open sound switcher",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "v",
+                                    "modifiers": {
+                                        "mandatory": ["control", "option"]
+                                    }
+                                },
+                                "to": [{ "shell_command": "osascript ~/.config/karabiner/open_sound.applescript" }],
+                                "type": "basic"
+                            }
+                        ]
                     }
                 ]
             },
