@@ -5,12 +5,6 @@ DOTFILES_REPO="${XDG_DATA_HOME:-$HOME/.local/share}/dotfiles/git"
 alias dotfiles="git --git-dir=$DOTFILES_REPO --work-tree=$HOME"
 alias dotfiles_code="GIT_DIR=$DOTFILES_REPO GIT_WORK_TREE=$HOME code ~"
 
-# Paths
-export PATH="$HOME/.local/bin/:$PATH"
-export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
-
-export POETRY_CONFIG_DIR="$HOME/.config/pypoetry"
-
 # Aliases
 alias ls="gls --color=auto --group-directories-first --sort=time"
 alias l="ls"
@@ -28,10 +22,6 @@ UNAME="$(uname -sr)"
 
 ## Mac specific
 case "$UNAME" in Darwin*)
-	export PATH="/opt/homebrew/bin:$PATH"
-	export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-	export STM32CubeMX_PATH="/Applications/STMicroelectronics/STM32CubeMX.app/Contents/Resources"
-
 	# On macOS use coreutils ls instead (as group-directories-first doesn't exist on mac ls)
 	alias ls="gls --color=auto --group-directories-first"
 	alias l="ls"
@@ -43,8 +33,6 @@ esac
 
 ## Windows (WSL or Git Bash) specific
 case "$UNAME" in Linux*-WSL2|MINGW64*)
-	export PATH="$HOME/AppData/Local/bob/nightly/bin:$PATH"
-
 	alias exp="explorer.exe ."
 	alias win="cd /mnt/c/Users/William"
 	;;
